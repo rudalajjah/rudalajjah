@@ -212,7 +212,7 @@ Receipt yang sudah ada di detail tidak muncul lagi.
 ### Expected Result
 
 - COGS berhasil dihapus
-- Total invoice berubah sesuai
+- Total invoice berubah sesuai data detail
 
 ---
 
@@ -225,7 +225,7 @@ Receipt yang sudah ada di detail tidak muncul lagi.
 ### Expected Result
 
 - KeepComm berhasil ditambahkan
-- Total invoice berubah
+- Total KeepComm di footer invoice berubah
 
 ---
 
@@ -238,7 +238,7 @@ Receipt yang sudah ada di detail tidak muncul lagi.
 ### Expected Result
 
 - KeepComm berhasil dihapus
-- Total invoice berubah
+- Total KeepComm di footer invoice berubah
 
 ---
 
@@ -283,20 +283,7 @@ Data harus sama dengan hasil edit.
 
 # 4. Scenario: Duplicate Validation
 
-## TC-19 Duplicate Receipt Prevention
-
-### Steps
-
-1. Tambahkan receipt ke invoice
-2. Klik Add lagi
-
-### Expected Result
-
-Receipt yang sama tidak muncul lagi di list.
-
----
-
-## TC-20 Receipt Used In Another Invoice
+## TC-19 Receipt Used In Another Invoice
 
 ### Steps
 
@@ -317,7 +304,7 @@ Receipt already used in another invoice
 
 # 5. Scenario: Concurrency Testing
 
-## TC-21 Double Tab Invoice Creation
+## TC-20 Double Tab Invoice Creation
 
 ### Steps
 
@@ -329,41 +316,13 @@ Receipt already used in another invoice
 
 Hanya 1 invoice yang berhasil save.
 
-Invoice kedua harus gagal validasi.
+Invoice kedua harus gagal karena ada validasi.
 
 ---
 
+# 6. Data Integrity Testing
 
-# 6. Edge Case Testing
-
-## TC-25 Multiple Receipts
-
-### Steps
-
-1. Tambahkan 10–20 receipts
-
-### Expected Result
-
-- Sistem tetap stabil
-- Perhitungan tetap benar
-
----
-
-## TC-26 Multiple KeepComm
-
-### Steps
-
-1. Tambahkan banyak keepcomm
-
-### Expected Result
-
-Total tetap akurat.
-
----
-
-# 7. Data Integrity Testing
-
-## TC-28 Invoice History
+## TC-21 Invoice History
 
 ### Expected Result
 
